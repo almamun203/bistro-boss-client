@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.cinzel {
+  font-family: "Cinzel";
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.authBg {
+  background-image:url('authentication.png');
+}
