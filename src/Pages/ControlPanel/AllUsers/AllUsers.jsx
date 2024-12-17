@@ -16,9 +16,7 @@ const AllUsers = () => {
     },
   });
 
-  const handleMakeAdmin = (user) => {
-    
-   
+  const handleMakeAdmin = (user) => {   
             Swal.fire({
                 title: "Make Admin?",
                 text: "You won't be able to revert this!",
@@ -42,9 +40,6 @@ const AllUsers = () => {
                 }
               });
         }
-  
-
-
   const handleDeleteUser = (user) => {
     Swal.fire({
       title: "Are you sure?",

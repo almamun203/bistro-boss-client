@@ -10,6 +10,7 @@ import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const Register = () => {
   const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate();
   const { createUser  , updateUserProfile } = useAuth();
   const {
     register,
@@ -17,7 +18,7 @@ const Register = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const navigate = useNavigate();
+  
   const onSubmit = (data) => {
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;

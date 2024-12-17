@@ -9,7 +9,9 @@ import useAdmin from "../Hooks/useAdmin";
 
 const Control = () => {
     // Get isAdmin value from the database
-    const [isAdmin] = useAdmin();
+    
+    const [isAdmin] = useAdmin() ;
+    
   return (
     <div className="flex cinzel">
       <div className="w-64 min-h-screen bg-[#D1A054]">
@@ -29,7 +31,7 @@ const Control = () => {
           <li>
             <NavLink to="/control/addItem">
             <IoIosRestaurant />
-              Add Item
+              Add Items
             </NavLink>
           </li>
           <li>
@@ -121,7 +123,7 @@ const Control = () => {
         </ul>
 
       </div>
-      <div className="flex-1 p-8">
+      <div className="flex-1 p-4">
         <Outlet></Outlet>
       </div>
     </div>
