@@ -13,8 +13,8 @@ const Control = () => {
     const [isAdmin] = useAdmin() ;
     
   return (
-    <div className="flex cinzel">
-      <div className="w-64 min-h-screen bg-[#D1A054]">
+    <div className="flex ">
+      <div className="w-64  min-h-screen bg-[#D1A054]">
         <p className=" text-xl  font-extrabold pl-6 pt-4">
           Bistro Boss <p className="text-sm  ">Restaurant</p>
         </p>
@@ -35,7 +35,7 @@ const Control = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/control/manageItems">
+            <NavLink to="/control/manageItem">
             <CgMenuGridO />
               Manage Items
             </NavLink>

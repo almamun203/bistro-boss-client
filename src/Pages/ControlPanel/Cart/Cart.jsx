@@ -19,9 +19,10 @@ const Cart = () => {
         confirmButtonText: "Yes, Remove it!"
       }).then((result) => {
         if (result.isConfirmed) {
-       
+        
          axiosSecure.delete(`/carts/${id}`)
          .then(res=>{
+          
            if( res.data.deletedCount > 0){
             Swal.fire({
                 title: "Removed!",
@@ -47,7 +48,7 @@ const Cart = () => {
           <span className="text-[#D1A054] ml-2">{cart.length}</span>
         </p>
         <p className="text-lg font-semibold ">
-          Total price: <span className="text-[#D1A054] ml-2">$ {totalPrice}</span>
+          Total price: <span className="text-[#D1A054] ml-2">$ {totalPrice.toFixed(2)}</span>
         </p>
         <button className="btn btn-sm bg-[#D1A054] text-white hover:text-black">
           Pay

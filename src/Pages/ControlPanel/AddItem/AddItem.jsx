@@ -87,6 +87,7 @@ const AddItem = () => {
               </label>
               <input
                 type="number"
+                step="any"
                 name="price"
                 placeholder="Price"
                 className="input rounded-none"

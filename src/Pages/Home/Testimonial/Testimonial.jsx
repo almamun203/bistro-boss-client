@@ -5,20 +5,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { useEffect, useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import pic from '../../../assets/quote.png'
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
 
 
 
 const Testimonial = () => {
-  const [reviews, setReviews] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/reviews")
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  }, []);
+  const axiosPublic = useAxiosPublic();
+  const {data : reviews = []} = useQuery({
+    queryKey: ['reviews'],
+    queryFn:async ()=>{
+     const res = await axiosPublic.get("/reviews")
+     return res.data;
+    }
+  })
   return (
     <div className="my-24">
       <SectionTItle

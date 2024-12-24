@@ -11,6 +11,7 @@ import PrivateRoute from './PrivateRoute';
 import AllUsers from "./Pages/ControlPanel/AllUsers/AllUsers";
 import AddItem from "./Pages/ControlPanel/AddItem/AddItem";
 import AdminRoute from "./AdminRoute";
+import ManageItem from "./Pages/ControlPanel/ManageItem/ManageItem";
 
 
 
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
     {
       path:'addItem',
       element:<AdminRoute><AddItem></AddItem></AdminRoute>
+    },
+    {
+      path:'manageItem',
+      element:<AdminRoute><ManageItem></ManageItem></AdminRoute>
     }
    ]
   }
